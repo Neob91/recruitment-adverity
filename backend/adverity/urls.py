@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from graphs.views import get_graph
+from graphs.views import get_filter_options, get_graph
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('graph', get_graph),
+    path('graph/filters', get_filter_options),
 ]

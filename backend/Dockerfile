@@ -7,4 +7,4 @@ RUN pip install pip-tools
 COPY requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
 
-CMD python
+CMD python manage.py runserver 0.0.0.0:8000

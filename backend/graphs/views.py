@@ -25,6 +25,10 @@ def get_graph(request):
 
     return HttpResponse(metrics)
 
+@require_GET
+def get_filter_options(request):
+    return HttpResponse(json.dumps(DataPoint.get_filter_options()))
+
 
 def _serialize(data):
     if isinstance(data, datetime.date):
